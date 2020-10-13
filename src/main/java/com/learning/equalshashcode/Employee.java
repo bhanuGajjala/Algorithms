@@ -8,6 +8,16 @@ public class Employee {
     private String eage;
     private String eid;
 
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
+    }
+
+    private Double salary;
+
     public String getEname() {
         return ename;
     }
