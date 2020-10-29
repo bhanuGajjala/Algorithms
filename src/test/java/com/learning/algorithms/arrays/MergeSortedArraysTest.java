@@ -16,24 +16,25 @@ class MergeSortedArraysTest {
 
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         mergeSortedArrays = new MergeSortedArrays();
     }
 
     @ParameterizedTest
     @MethodSource("mergeData")
-    public void mergeSortedArraysTest(int[] inputOne, int[] inputTwo, int[] expected){
+    public void mergeSortedArraysTest(int[] inputOne, int[] inputTwo, int[] expected) {
 
-        int[] output = mergeSortedArrays.mergeArrays(inputOne,inputTwo);
+        int[] output = mergeSortedArrays.mergeArrays(inputOne, inputTwo);
 
         Assertions.assertAll(() -> Assertions.assertEquals(expected.length, output.length),
                 () -> Assertions.assertTrue(Arrays.equals(expected, output)));
 
     }
 
-    public static Stream<Arguments> mergeData(){
+    public static Stream<Arguments> mergeData() {
         return Stream.of(
-                Arguments.arguments(new int[]{1,2,3}, new int[]{4,5,6}, new int[]{1,2,3,4,5,6})
+                //Arguments.arguments(new int[]{1, 2, 3}, new int[]{4, 5, 6}, new int[]{1, 2, 3, 4, 5, 6}),
+                Arguments.arguments(new int[]{1, 2, 3, 6, 8}, new int[]{4, 5, 7, 9}, new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9})
         );
     }
 
