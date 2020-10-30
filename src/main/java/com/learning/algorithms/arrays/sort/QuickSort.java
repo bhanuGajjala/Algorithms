@@ -1,4 +1,4 @@
-package com.learning.algorithms.sort;
+package com.learning.algorithms.arrays.sort;
 
 public class QuickSort {
 
